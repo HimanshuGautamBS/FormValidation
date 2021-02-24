@@ -1,0 +1,19 @@
+JSON Web Token
+
+It is a compact and self-contained way for securely transmitting information between parties as a JSON object.
+
+-Securing web applications
+-Standard way for two parties to communicate securly
+-RFC 7519
+-Commonly used for autherization
+
+   **Autherization Strategies**
+
+-Session Token
+-JWT Token
+
+HTTP-- stateless protocol
+
+DYNAMIC REQUEST- Response acc to user
+
+JWT - uses signed document
