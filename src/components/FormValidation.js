@@ -5,13 +5,13 @@ class FormValidation extends Component {
     
 constructor(props){
   super()
-  this.state={ fullname:"Myname",
-               email   :"abc@.com",
-               phone   :"9958055434",
-               message :"type message here",
-               password:""
-        
-    }
+  this.state=
+  { fullname:"Myname",
+    email   :"abc@.com",
+    phone   :"9958055434",
+    message :"type message here",
+    password:""
+  }
 }
 //  we have to use onChange in input field for getting rid of read only mode
 //  everything that we reaceive in react is in form of object therefore to change the value of value field we have to use event.target.value

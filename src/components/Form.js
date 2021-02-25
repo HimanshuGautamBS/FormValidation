@@ -43,20 +43,21 @@ export default class Form extends Component {
       }
     }
 
-  render() {
-        return (
-            <div style={{padding:"50px"}}>
-                <h3>Form</h3>
-                <label>Email</label><br/>
-                <input type="text" onChange={(event)=>{this.setState({email:event.target.value})}}/>
-                <p style={{color:"red" ,fontSize:"14px"}}>{this.state.nameError}</p>
+  render() 
+  {
+    return (
+      <div style={{padding:"50px"}}>
+               
+      <label>Email</label><br/>
+      <input type="text" onChange={(event)=>{this.setState({email:event.target.value})}}/>
+      <p style={{color:"red" ,fontSize:"14px"}}>{this.state.nameError}</p>
 
-                <label>Password</label><br/>
-                <input type="password" onChange={(event)=>{this.setState({password:event.target.value})}}/>
-                <p style={{color:"red" ,fontSize:"14px"}}>{this.state.passwordError}</p>
-                <button onClick={()=>this.submit()}>Submit</button>
+      <label>Password</label><br/>
+      <input type="password" onChange={(event)=>{this.setState({password:event.target.value})}}/>
+      <p style={{color:"red" ,fontSize:"14px"}}>{this.state.passwordError}</p>
+      <button onClick={()=>this.submit()}>Submit</button>
                 
-            </div>
+      </div>
         )
     }
 }
