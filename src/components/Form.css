@@ -4,6 +4,7 @@ input[type=text], input[type=email] , input[type=number] ,input[type=password] {
     margin: 10px 0px;
     box-sizing: border-box;  
     border: 2px solid #58B19F;
+    background-color: #ecf9f9;
 
 }
 
@@ -17,7 +18,7 @@ textarea {
     resize: none;  
 }
 
-input[type=submit] {
+input[type=submit],button {
     background-color: #8842d5;
     border: none;
     color: white;
