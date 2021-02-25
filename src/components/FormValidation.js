@@ -39,36 +39,37 @@ handleAll=(event)=>{
   this.setState({[event.target.name]:event.target.value})
 }
 
-handlesubmit=(event)=>{
-    // alert(`my name is ${this.state.fullname}`)
-    alert(JSON.stringify(this.state));
-    event.preventDefault();
-    // event.preventDefault() stop the page to redirect on new page after sending data
+handlesubmit=(event)=>
+{
+  // alert(`my name is ${this.state.fullname}`)
+  alert(JSON.stringify(this.state));
+  event.preventDefault();
+  // event.preventDefault() stop the page to redirect on new page after sending data
 }
-    render() {
-        return (
-            <div style={{padding:"50px"}}>
-                {/* handlesubmit for sending data to server */}
-              <form onSubmit ={this.handlesubmit}>
-                <label>Fullaname</label><br/> 
-                <input type="text" name="fullname" value={this.state.fullname}  onChange={this.handleAll}/> <br/>                                
-                {/* <input type="text" value={this.state.fullname} name="fullname" onChange={this.handleName}/> <br/> */}
+  render() {
+    return (
+      <div style={{padding:"50px"}}>
+          {/* handlesubmit for sending data to server */}
+        <form onSubmit ={this.handlesubmit}>
+          <label>Fullaname</label><br/> 
+          <input type="text" name="fullname" value={this.state.fullname}  onChange={this.handleAll}/> <br/>                                
+          {/* <input type="text" value={this.state.fullname} name="fullname" onChange={this.handleName}/> <br/> */}
                 
-                <label>Email</label><br/>
-                <input type="email"  name="email" value={this.state.email} onChange={this.handleAll}/> <br/>
+          <label>Email</label><br/>
+          <input type="email"  name="email" value={this.state.email} onChange={this.handleAll}/> <br/>
 
-                <label>Mobile</label><br/>
-                <input type="number" name="phone" value={this.state.phone}  onChange={this.handleAll}/> <br/>
+          <label>Mobile</label><br/>
+          <input type="number" name="phone" value={this.state.phone}  onChange={this.handleAll}/> <br/>
 
-                <label>Message </label><br/>
-                <textarea value={this.state.message} name="message"  onChange={this.handleAll}/> <br/>
+          <label>Message </label><br/>
+          <textarea value={this.state.message} name="message"  onChange={this.handleAll}/> <br/>
 
-                <label> Password</label><br/>
-                <input type="password" name="password" value={this.state.password}  onChange={this.handleAll}/> <br/>
+          <label> Password</label><br/>
+          <input type="password" name="password" value={this.state.password}  onChange={this.handleAll}/> <br/>
 
-                <input type="submit" value="send"/> 
-                {/* if type ="submit" it'll redirect to new page(property of js) */}
-              </form>
+          <input type="submit" value="send"/> 
+          {/* if type ="submit" it'll redirect to new page(property of js) */}
+        </form>
             </div>
         )
     }
