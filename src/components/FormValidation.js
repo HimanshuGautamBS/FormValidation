@@ -8,7 +8,8 @@ constructor(props){
   this.state={ fullname:"Myname",
                email   :"abc@.com",
                phone   :"9958055434",
-               message :"type message here"   
+               message :"type message here",
+               password:""
         
     }
 }
@@ -32,6 +33,8 @@ constructor(props){
 //     this.setState({message:event.target.value})
 // }
 
+
+// keep in mind that - event.target.name not .value
 handleAll=(event)=>{
   this.setState({[event.target.name]:event.target.value})
 }
@@ -44,7 +47,7 @@ handlesubmit=(event)=>{
 }
     render() {
         return (
-            <div>
+            <div style={{padding:"50px"}}>
                 {/* handlesubmit for sending data to server */}
               <form onSubmit ={this.handlesubmit}>
                 <label>Fullaname</label><br/> 
@@ -59,6 +62,9 @@ handlesubmit=(event)=>{
 
                 <label>Message </label><br/>
                 <textarea value={this.state.message} name="message"  onChange={this.handleAll}/> <br/>
+
+                <label> Password</label><br/>
+                <input type="password" name="password" value={this.state.password}  onChange={this.handleAll}/> <br/>
 
                 <input type="submit" value="send"/> 
                 {/* if type ="submit" it'll redirect to new page(property of js) */}
